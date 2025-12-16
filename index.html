@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Hobbies</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #00000000;
+            color: #333;
+        }
+
+        header {
+            background-color: #000;
+            color: #fff;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            margin-top: 0.5rem;
+            font-size: 1.1rem;
+            color: #ccc;
+        }
+
+        nav {
+            background-color: #f8f8f6; /* light cream tone */
+            border-bottom: 1px solid #ddd;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0.5rem 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 1.2rem;
+        }
+
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        nav ul li a:hover {
+            color: #555;
+            border-bottom: 2px solid #555;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem 4rem 1rem;
+        }
+
+        section {
+            background-color: #f6f6f4; /* soft cream-gray */
+            border-radius: 6px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        section h2 {
+            margin-top: 0;
+            color: #222;
+            font-size: 1.8rem;
+        }
+
+        section p {
+            color: #555;
+            line-height: 1.6;
+            font-size: 1.05rem;
+        }
+
+        section img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 5px;
+            display: block;
+            margin: 1rem auto;
+        }
+
+        footer {
+            background-color: #000;
+            color: #000000;
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: #ccc;
+        }
+
+        form {
+            margin-top: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #ffe6d65d;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: #333;
+            color: #fff;
+            padding: 0.8rem 1rem;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: none;
+        }
+       
+        table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    border: 5px solid #aaaaaa;
+    padding: 12px;
+    text-align: left;
+}
+th {
+    background-color: #000000;
+    color: #ffffff;
+}
+tr:nth-child(even) {
+    background-color: #cecece;
+}
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+</style>    
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to My Hobby Corner</h1>
+        <p>Exploring passions that bring joy and inspiration</p>
+        <nav>
+            <ul>
+                <button id="menu-toggle"></button>
+        <div class="nav-links">
+                <li><a href="#art">Art</a></li>
+                <li><a href="#instrument">Instruments</a></li>
+                <li><a href="#watching">Watching</a></li>
+                <li><a href="#gaming">Gaming</a></li>
+                <li><a href="#reading">Reading</a></li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    
+        <section id="art">
+            <h2>Art</h2>
+            <p>Art allows me to express my creativity and emotions through colors and shapes. Whether it’s sketching or painting, it helps me see the world in a more thoughtful and imaginative way.</p>
+            <a href="index1.html"><img src="art.jpg" alt="Artworks and paintings"></a>
+        </section>
+
+        <section id="instrument">
+            <h2>Playing Instruments</h2>
+            <p>Playing instruments connects me deeply with rhythm and melody. I love experimenting with sounds, learning new pieces, and sharing music that brings peace and joy to others.</p>
+            <a href="index2.html"><img src="instrument.jpg" alt="Musical instruments"></a>
+        </section>
+
+        <section id="watching">
+            <h2>Watching series</h2>
+            <p>Singing helps me express my thoughts and emotions in ways that words alone cannot. It’s a mix of passion, control, and heart — something I enjoy both alone and with others.</p>
+        
+            <a href="index3.html">
+                <img src="Series.jpeg" alt="Watching Series">
+            </a>
+        </section>
+        
+        </section>
+        <section id="gaming">
+            <h2>Playing Games</h2>
+            <p>Gaming is not just a hobby — it’s an adventure. I enjoy exploring immersive stories, solving challenges, and connecting with players around the world through fun and teamwork.</p>
+            <a href="index4.html">
+            <img src="gaming.jpg" alt="Playing video games">
+        </a>
+        </section>
+
+        <section id="reading">
+            <h2>Reading Novels</h2>
+            <p>Reading takes me on journeys across time and imagination. From thrilling mysteries to heartfelt dramas, books give me endless worlds to explore and lessons to learn.</p>
+            <a href="index5.html">
+            <img src="reading.jpg" alt="Reading novels">
+            </a>
+        </section>
+        <h2>My favorite</h2>
+        <table>
+            <tr>
+                <th>Dessert</th>
+                <th>Food</th>
+                <th>Color</th>
+            </tr>
+             <tr>
+                <td>Daifuku</td>
+                <td>Ramen</td>
+                <td>Nude brown</td>
+            </tr> 
+        <tr>
+                <td>Cake</td>
+                <td>Spaghetti</td>
+                <td>Cocoa mist</td>
+            </tr>
+            <tr>
+                <td>Ice cream</td>
+                <td>Ramyeon</td>
+                <td>Grey</td>
+            </tr>
+         <tr>
+                <td>Croissant</td>
+                <td>Udon</td>
+                <td>Black</td>
+            </tr>
+         <tr>
+                <td>Donut</td>
+                <td>Soba</td>
+                <td>Brown Coffee</td>
+            </tr>
+        </table>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form action="submit_form.php" method="POST">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 My Hobby Corner. All rights reserved.</p>
+    </footer>
+
+    <div class="back-to-top" onclick="scrollToTop()">↑</div>
+
+    <script>
+        window.onscroll = function() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                document.querySelector('.back-to-top').style.display = 'block';
+            } else {
+                document.querySelector('.back-to-top').style.display = 'none';
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+   
+</body>
+
+
+</html>
+

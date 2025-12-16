@@ -1,0 +1,353 @@
+ชอหน้านี้ด้วย อนิเมชั่นไม่ต้องเหมือนกัน100เปอร์เซนต์นะ<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watching: Movie , Series - My Hobby Corner</title>
+
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fefdf7;
+            color: #2a2a2a;
+            line-height: 1.7;
+        }
+
+        /* CINEMATIC DARK ROMANCE HEADER */
+        header {
+            position: relative;
+            background-color: #111;
+            color: #fff;
+            padding: 5rem 1rem;
+            text-align: center;
+            background-image: url('series-header.jpg');
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.55) contrast(1.05);
+            box-shadow: inset 0 0 150px rgba(0,0,0,0.85);
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at center, rgba(0,0,0,0) 20%, rgba(0,0,0,0.75) 100%);
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin: 0;
+            position: relative;
+            z-index: 2;
+            font-weight: 700;
+            text-shadow: 0 0 25px rgba(0,0,0,0.8);
+        }
+
+        header p {
+            font-size: 1.35rem;
+            position: relative;
+            z-index: 2;
+            margin-top: 1.2rem;
+            color: #e8e8e8;
+            opacity: 0.9;
+        }
+
+        /* NAVIGATION - elegant and subtle */
+        nav {
+            background-color: #f8f8f6;
+            padding: 1.3rem 0;
+            border-top: 2px solid #ddd;
+            border-bottom: 2px solid #ddd;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: inline-flex;
+        }
+
+        nav ul li {
+            margin: 0 2rem;
+        }
+
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        nav ul li a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 0;
+            height: 2px;
+            background-color: #000;
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        /* MAIN */
+        main {
+            max-width: 1100px;
+            margin: 3rem auto;
+            padding: 0 1rem 4rem 1rem;
+        }
+
+        /* DARK-ROMANCE FEATURE SECTION */
+        .watching-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2.5rem;
+            padding: 2.5rem;
+            background: linear-gradient(135deg, #fff, #f3f1eb);
+            border-radius: 16px;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.12);
+        }
+
+        .watching-content img {
+            width: 70%;
+            max-height: 760px;
+            object-fit: cover;
+            border-radius: 14px;
+            filter: brightness(0.9) contrast(1.1);
+            transition: all 0.35s ease;
+            box-shadow: 0 0 25px rgba(0,0,0,0.2);
+        }
+
+        .watching-content img:hover {
+            transform: scale(1.04);
+            filter: brightness(0.75) contrast(1.2);
+            box-shadow: 0 0 40px rgba(0,0,0,0.28);
+        }
+
+        .watching-text {
+            width: 50%;
+            color: #3a3a3a;
+            font-size: 1.22rem;
+        }
+
+        .watching-text h2 {
+            color: #1a1a1a;
+            font-size: 2.5rem;
+            margin-bottom: 1.2rem;
+            font-weight: 700;
+        }
+
+        .section-divider {
+            width: 90px;
+            height: 4px;
+            background-color: #111;
+            opacity: 0.85;
+            margin: 1.2rem 0;
+            border-radius: 2px;
+        }
+
+        /* GALLERY — cinematic shading */
+        .brush-stroke {
+            background-image: url('brush-stroke-pattern.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 5rem 1rem 6rem 1rem;
+            border-radius: 14px;
+            margin-top: 3rem;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.18);
+        }
+
+        .brush-stroke h2 {
+            text-align:center;
+            color:#111;
+            font-size:2.4rem;
+            margin-bottom:1.8rem;
+        }
+
+        .series-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .series-gallery img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 12px;
+            filter: brightness(0.88) contrast(1.08);
+            transition: all 0.35s ease;
+            box-shadow: 0 0 18px rgba(0,0,0,0.14);
+        }
+
+        .series-gallery img:hover {
+            transform: scale(1.04);
+            filter: brightness(0.75) contrast(1.15);
+            box-shadow: 0 0 35px rgba(0,0,0,0.26);
+        }
+
+        footer {
+            background-color: #111;
+            color: #eee;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+            letter-spacing: 0.5px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+            color: #cfcfcf;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Watching Series</h1>
+    <p>Exploring dark romance, complex relationships, and emotional drama.</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index1.html">Art</a></li>
+        <li><a href="index2.html">Instruments</a></li>
+        <li><a href="index3.html">Watching</a></li>
+        <li><a href="index4.html">Gaming</a></li>
+        <li><a href="index5.html">Reading</a></li>
+    </ul>
+</nav>
+
+<main>
+
+    <!-- FEATURE SECTION WITH NEW INFORMATION + NEW LAYOUT -->
+    <section class="watching-content" style="flex-direction: row-reverse;">
+        <div class="watching-text">
+            <h2>Immersive and Thought-Provoking Stories</h2>
+            <div class="section-divider"></div>
+            <p>
+                I’m drawn to love that feels wrong from the start,
+the kind that hurts even before it begins,
+the kind you know will ruin them, ruin you, ruin everything—
+and yet you still lean in.
+Because something in the ache feels honest.
+More honest than comfort ever could.
+            </p>
+
+            <p>
+                I love stories that don’t just tell a dark romance—
+they pull you into it, drag you beneath the surface,
+and hold you there long enough for your heartbeat to change.
+            </p>
+        </div>
+
+        <div class="watching-image">
+            <a href="https://youtu.be/xvec_vioks8?si=ZIJpaLnAtOdwHtQl">
+                <img src="Series.jpeg" alt="Watching Series">
+            </a>
+        </div>
+    </section>
+
+    <!-- SECOND SECTION: CINEMATIC DARK ROMANCE MOOD -->
+    <section style="margin-top:4rem; padding:3rem; background:#f7f5ef; border-radius:18px; box-shadow:0 10px 35px rgba(0,0,0,0.12);">
+        <h2 style="font-size:2.4rem; color:#111; text-align:center; margin-bottom:1.5rem;">Why Dark Romance Captivates Me</h2>
+        <p style="max-width:900px; margin:0 auto; font-size:1.2rem; color:#3a3a3a; line-height:1.8; text-align:center;">
+            There’s something hauntingly beautiful about stories that blend love with mystery, danger, or emotional conflict.
+            These series often feel more raw and honest — they show the messy parts of love, the flaws, the sacrifices, and the heartbreak.
+        </p>
+    
+        <div style="display:flex; justify-content:center; gap:2rem; margin-top:3rem; flex-wrap:wrap;">
+    
+            <!-- Card 1 -->
+            <div style="width:260px; padding:1.5rem; background:white; border-radius:14px; box-shadow:0 6px 20px rgba(0,0,0,0.08); text-align:center; display:flex; flex-direction:column; gap:1rem;">
+                <img src="mood2.jpg" style="width:100%; height:130px; object-fit:cover; border-radius:10px;" />
+                <h3 style="color:#111; margin:0;">Cinematic Atmosphere</h3>
+                <p style="font-size:1rem; margin:0;">I crave stories that press on the heart until it aches,
+                    slowly, relentlessly,
+                    as if the narrative itself is squeezing your lungs
+                    and whispering, “Stay.”
+                    Even when it hurts.
+                    Especially when it hurts.
+                    
+                    These romances were never meant to end well.
+                    They exist to haunt.
+                    To leave fingerprints on your mind.
+                    To remind you that sometimes the most painful love
+                    is the one that feels the most real.</p>
+            </div>
+    
+            <!-- Card 2 -->
+            <div style="width:260px; padding:1.5rem; background:white; border-radius:14px; box-shadow:0 6px 20px rgba(0,0,0,0.08); text-align:center; display:flex; flex-direction:column; gap:1rem;">
+                <img src="mood1.jpg" style="width:100%; height:130px; object-fit:cover; border-radius:10px;" />
+                <h3 style="color:#111; margin:0;">Emotional Depth</h3>
+                <p style="font-size:1rem; margin:0;">I like relationships that aren’t built to heal.
+                    They’re built from longing, fear, hunger,
+                    and wounds that never closed properly.
+                    Two people with sharp edges,
+                    crashing into each other because they don’t know how else to exist.
+                    It’s toxic, beautiful, inevitable—
+                    a bond that tightens the more they try to escape,
+                    a love that suffocates yet somehow feels like oxygen..</p>
+            </div>
+    
+            <!-- Card 3 -->
+            <div style="width:260px; padding:1.5rem; background:white; border-radius:14px; box-shadow:0 6px 20px rgba(0,0,0,0.08); text-align:center; display:flex; flex-direction:column; gap:1rem;">
+                <img src="mood3.jpg" style="width:100%; height:130px; object-fit:cover; border-radius:10px;" />
+                <h3 style="color:#111; margin:0;">Characters</h3>
+                <p style="font-size:1rem; margin:0;">The characters I love are never clean or whole.
+                    They’re the ones who laugh softly while hiding a fracture deep inside,
+                    the ones who have learned to survive by pretending they’re fine,
+                    even though they’ve been bleeding quietly for years.
+                    And when they reach for someone—
+                    it isn’t hope.
+                    It’s desperation.
+                    A trembling attempt to feel alive for one more moment.</p>
+            </div>
+    
+        </div>
+    </section>
+    
+    <!-- GALLERY SECTION -->
+    <section class="brush-stroke">
+        <h2 style="text-align:center; color:#222; font-size:2.2rem; margin-bottom:2rem;">Favorite Series Gallery</h2>
+
+        <div class="series-gallery">
+            <a href="https://youtu.be/NFLoqZHt67c">
+                <img src="series4.jpg" alt="Series Poster 1">
+            </a>
+
+            <a href="https://youtu.be/gzImj8IUh3Y">
+                <img src="series2.jpg" alt="Series Poster 2">
+            </a>
+
+            <a href="https://youtu.be/gmRKv7n2If8">
+                <img src="series3.jpg" alt="Series Poster 3">
+            </a>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2025 My Hobby Corner. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+
+

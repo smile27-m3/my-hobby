@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art - My Hobby Corner</title>
+
+    <style>
+        /* ---------- Base Style ---------- */
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fefdf7;
+            color: #333;
+        }
+
+        /* ---------- Header ---------- */
+        header {
+            background-color: #222;
+            color: #fff;
+            padding: 3.5rem 1rem;
+            text-align: center;
+            background-image: url('art-header-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.4);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin: 0;
+            animation: fadeUp 1.2s ease-out forwards;
+        }
+
+        header p {
+            font-size: 1.25rem;
+            color: #ddd;
+            margin-top: 1rem;
+            animation: fadeUp 1.5s ease-out forwards;
+        }
+
+        /* ---------- Navigation ---------- */
+        nav {
+            background-color: #f8f8f6;
+            padding: 1rem 0;
+            border-top: 2px solid #ddd;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: inline-flex;
+        }
+
+        nav ul li {
+            margin: 0 2rem;
+        }
+
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        nav ul li a:hover {
+            color: #000;
+            border-bottom: 3px solid #000;
+        }
+
+        /* ---------- Main ---------- */
+        main {
+            max-width: 1100px;
+            margin: 3rem auto;
+            padding: 0 1rem 4rem;
+        }
+
+        .art-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 3rem;
+            margin-bottom: 5rem;
+        }
+
+        .art-text {
+            width: 50%;
+            font-size: 1.2rem;
+            line-height: 1.7;
+            color: #444;
+            animation: fadeUp 1.4s ease-out forwards;
+        }
+
+        .art-text h2 {
+            font-size: 2.2rem;
+            color: #222;
+            margin-bottom: 1rem;
+        }
+
+        .art-image img {
+            width: 80%;
+            max-height: 700px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.12);
+            animation: fadeIn 1.8s ease-out forwards;
+            transition: transform 0.4s ease;
+        }
+
+        .art-image img:hover {
+            transform: scale(1.04);
+        }
+
+        /* ---------- Gallery ---------- */
+        .brush-stroke {
+            padding: 4rem 1rem;
+        }
+
+        .brush-stroke h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 3rem;
+            animation: fadeUp 1.3s ease-out forwards;
+        }
+
+        .art-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .art-gallery img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.08);
+            opacity: 0;
+            animation: fadeUp 1.2s ease-out forwards;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .art-gallery img:nth-child(1) { animation-delay: 0.1s; }
+        .art-gallery img:nth-child(2) { animation-delay: 0.2s; }
+        .art-gallery img:nth-child(3) { animation-delay: 0.3s; }
+        .art-gallery img:nth-child(4) { animation-delay: 0.4s; }
+        .art-gallery img:nth-child(5) { animation-delay: 0.5s; }
+        .art-gallery img:nth-child(6) { animation-delay: 0.6s; }
+
+        .art-gallery img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+        }
+
+        /* ---------- Footer ---------- */
+        footer {
+            background-color: #222;
+            color: #ccc;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        /* ---------- Animations ---------- */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* ---------- Responsive ---------- */
+        @media (max-width: 900px) {
+            .art-content {
+                flex-direction: column;
+            }
+
+            .art-text,
+            .art-image img {
+                width: 100%;
+            }
+
+            .art-gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .art-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Art: A World of Creativity</h1>
+    <p>Where emotions, colors, and silence meet on canvas.</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index1.html">Art</a></li>
+        <li><a href="index2.html">Instruments</a></li>
+        <li><a href="index3.html">Watching</a></li>
+        <li><a href="index4.html">Gaming</a></li>
+        <li><a href="index5.html">Reading</a></li>
+    </ul>
+</nav>
+
+<main>
+    <section class="art-content">
+        <div class="art-text">
+            <h2>The Power of Art</h2>
+            <p>
+                Art is my quiet language. Through colors and forms, I express emotions that words
+                often fail to capture. Each piece is a moment of reflection — calm, chaotic, or
+                deeply personal.
+            </p>
+            <p>
+                Creating art allows me to slow down, observe, and transform feelings into something
+                tangible. It is both a release and a mirror.
+            </p>
+        </div>
+
+        <div class="art-image">
+            <img src="art.jpg" alt="Artworks and paintings">
+        </div>
+    </section>
+
+    <section class="brush-stroke">
+        <h2>Gallery of Creations</h2>
+        <div class="art-gallery">
+            <img src="art1.jpg" alt="Art Piece 1">
+            <img src="art2.jpg" alt="Art Piece 2">
+            <img src="art6.jpg" alt="Art Piece 6">
+            <img src="art4.jpg" alt="Art Piece 4">
+            <img src="art5.jpg" alt="Art Piece 5">
+            <img src="art3.jpg" alt="Art Piece 3">
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 My Hobby Corner. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

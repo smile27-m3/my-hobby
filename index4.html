@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming - My Hobby Corner</title>
+
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fefdf7;
+            color: #000000;
+        }
+
+        /* ---------------- HEADER ---------------- */
+        header {
+            background-color: #000;
+            background-image: url("gaming-header.jpg");
+            background-size: cover;
+            background-position: center;
+            padding: 6rem 1rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0);
+        }
+
+        header h1, header p {
+            position: relative;
+            color: #fff;
+            z-index: 2;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        header p {
+            font-size: 1.25rem;
+            color: #eee;
+        }
+
+        /* ---------------- NAVIGATION ---------------- */
+        nav {
+            background-color: #f8f8f6;
+            text-align: center;
+            padding: 1rem 0;
+            border-top: 2px solid #ddd;
+        }
+
+        nav ul {
+            list-style: none;
+            display: inline-flex;
+            margin: 0;
+            padding: 0;
+            gap: 2rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        nav ul li a:hover {
+            color: #000;
+            border-bottom: 3px solid #000;
+        }
+
+        /* ---------------- MAIN CONTENT ---------------- */
+        main {
+            max-width: 1100px;
+            margin: 3rem auto;
+            padding: 0 1rem 4rem;
+        }
+
+        /* Intro Section */
+        .gaming-intro {
+            text-align: center;
+            background: #ffffff;
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+            margin-bottom: 4rem;
+        }
+
+        .gaming-intro h2 {
+            font-size: 2.3rem;
+            margin-bottom: 1rem;
+            color: #222;
+        }
+
+        .gaming-intro p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #444;
+        }
+
+        /* Featured Game Section */
+        .featured-game {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.05);
+            margin-bottom: 4rem;
+        }
+
+        .featured-game img {
+            width: 50%;
+            height: 340px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.08);
+        }
+
+        .featured-text {
+            width: 50%;
+        }
+
+        .featured-text h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #222;
+        }
+
+        .featured-text p {
+            line-height: 1.7;
+            color: #444;
+            font-size: 1.1rem;
+        }
+
+        /* Horizontal Gallery */
+        .gallery-title {
+            text-align: center;
+            font-size: 2.1rem;
+            margin-bottom: 1.5rem;
+            color: #222;
+        }
+
+        .scroll-gallery {
+            display: flex;
+            overflow-x: auto;
+            gap: 1.5rem;
+            padding-bottom: 1rem;
+            scrollbar-width: thin;
+            perspective: 1000px; /* for parallax effect */
+        }
+
+        .scroll-gallery img {
+            height: 260px;
+            min-width: 400px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.1);
+            transition: transform 0.5s ease, box-shadow 0.3s ease;
+        }
+
+        .scroll-gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+        }
+
+        /* ---------------- FOOTER ---------------- */
+        footer {
+            background-color: #222;
+            text-align: center;
+            color: #ccc;
+            padding: 2rem;
+        }
+
+        /* ---------------- ANIMATIONS ---------------- */
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(30px);}
+            100% { opacity: 1; transform: translateY(0);}
+        }
+
+        @keyframes slideIn {
+            0% { opacity: 0; transform: translateX(-50px);}
+            100% { opacity: 1; transform: translateX(0);}
+        }
+
+        /* Header animations */
+        header h1 { animation: fadeInUp 1s ease-out forwards;}
+        header p { animation: fadeInUp 1s ease-out 0.3s forwards;}
+
+        /* Nav staggered fade-in */
+        nav ul li {
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        nav ul li:nth-child(1) { animation-delay: 0.2s;}
+        nav ul li:nth-child(2) { animation-delay: 0.4s;}
+        nav ul li:nth-child(3) { animation-delay: 0.6s;}
+        nav ul li:nth-child(4) { animation-delay: 0.8s;}
+        nav ul li:nth-child(5) { animation-delay: 1s;}
+        nav ul li:nth-child(6) { animation-delay: 1.2s;}
+
+        /* Intro fade in */
+        .gaming-intro { opacity: 0; animation: fadeInUp 1s ease-out 0.5s forwards;}
+
+        /* Featured game animations */
+        .featured-game { opacity: 0; animation: fadeInUp 1s ease-out 0.7s forwards;}
+        .featured-game img { animation: slideIn 1s ease-out 0.9s forwards;}
+        .featured-text { animation: fadeInUp 1s ease-out 1.1s forwards;}
+
+        /* Gallery fade-in with stagger */
+        .scroll-gallery img {
+            opacity: 0;
+            transform: scale(0.95);
+            animation: fadeInUp 1s ease-out forwards;
+        }
+        .scroll-gallery img:nth-child(1) { animation-delay: 1.2s;}
+        .scroll-gallery img:nth-child(2) { animation-delay: 1.4s;}
+        .scroll-gallery img:nth-child(3) { animation-delay: 1.6s;}
+        .scroll-gallery img:nth-child(4) { animation-delay: 1.8s;}
+
+        /* Footer animation */
+        footer { opacity: 0; animation: fadeInUp 1s ease-out 2s forwards;}
+
+        /* ---------------- PARALLAX ON SCROLL ---------------- */
+        .scroll-gallery img {
+            will-change: transform;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Gaming: My Digital Playground</h1>
+    <p>Immersive worlds, unforgettable stories, endless adventures.</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index1.html">Art</a></li>
+        <li><a href="index2.html">Instruments</a></li>
+        <li><a href="index3.html">Watching</a></li>
+        <li><a href="index4.html">Gaming</a></li>
+        <li><a href="index5.html">Reading</a></li>
+    </ul>
+</nav>
+
+<main>
+
+    <!-- INTRO CARD -->
+    <section class="gaming-intro">
+        <h2>Why Gaming Captivates Me</h2>
+        <p>
+            Gaming is not just a hobby—it’s a way to step into stories, feel emotions, 
+            and challenge myself. Some games excite the mind, others stir the heart, 
+            and some simply offer a peaceful escape. Every experience leaves a memory 
+            that I carry beyond the screen.
+        </p>
+    </section>
+
+    <!-- FEATURED GAME -->
+    <section class="featured-game">
+        <img src="gameset.jpg" alt="Featured game">
+        <div class="featured-text">
+            <h3>A Game That Resonates</h3>
+            <p>
+                There’s always one game that sticks with me—a world I return to whenever I 
+                need inspiration, comfort, or adventure. The story, characters, and atmosphere 
+                create an experience that feels personal and unforgettable.
+            </p>
+        </div>
+    </section>
+
+    <!-- HORIZONTAL SCROLL GALLERY -->
+    <h2 class="gallery-title">Games I Love</h2>
+
+    <div class="scroll-gallery">
+        <a href="https://youtu.be/tjfTxFzGh3Q?si=88PNxCVIpf-QEoYS">
+            <img src="game1.jpeg" alt="Game 1">
+        </a>
+        <a href="https://youtu.be/aQAyZmbTw18?si=YfgPyv_niPwCPfc1">
+            <img src="game2.jpg" alt="Game 2">
+        </a>
+        <a href="https://youtu.be/z1e1gmnNoj8?si=5QGMFQwvkfRkouNB">
+            <img src="game3.jpg" alt="Game 3">
+        </a>
+        <a href="https://youtu.be/GWZAGGQtwEY?si=C_0iwYVrLD1iRxnl">
+            <img src="game4.jpg" alt="Game 4">
+        </a>
+    </div>
+
+</main>
+
+<footer>
+    <p>&copy; 2025 My Hobby Corner. All rights reserved.</p>
+</footer>
+
+<script>
+    // Parallax effect on gallery images
+    const gallery = document.querySelector('.scroll-gallery');
+    gallery.addEventListener('scroll', () => {
+        const scrollLeft = gallery.scrollLeft;
+        const imgs = gallery.querySelectorAll('img');
+        imgs.forEach((img, index) => {
+            const speed = 0.2 + index * 0.05;
+            img.style.transform = `translateY(${scrollLeft * speed}px) scale(1)`;
+        });
+    });
+</script>
+
+</body>
+</html>

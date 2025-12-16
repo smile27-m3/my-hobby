@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading – Dark Romance</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #fefdf7;
+            color: #333;
+        }
+
+        /* ---------------- HEADER ---------------- */
+        header {
+            padding: 5rem 1.5rem 3rem;
+            text-align: center;
+            background-color: #222;
+            color: #fff;
+            box-shadow: inset 0 0 15px rgba(0,0,0,0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        header p {
+            max-width: 760px;
+            margin: 0 auto;
+            font-size: 1.25rem;
+            color: #ddd;
+            animation: fadeInUp 1s ease-out 0.3s forwards;
+        }
+
+        /* ---------------- NAVIGATION ---------------- */
+        nav {
+            background-color: #f8f8f6;
+            padding: 1rem 0;
+            border-top: 2px solid #ddd;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: inline-flex;
+        }
+
+        nav ul li {
+            margin: 0 2rem;
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        nav ul li:nth-child(1) { animation-delay: 0.2s; }
+        nav ul li:nth-child(2) { animation-delay: 0.4s; }
+        nav ul li:nth-child(3) { animation-delay: 0.6s; }
+        nav ul li:nth-child(4) { animation-delay: 0.8s; }
+        nav ul li:nth-child(5) { animation-delay: 1s; }
+        nav ul li:nth-child(6) { animation-delay: 1.2s; }
+
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        nav ul li a:hover {
+            color: #000;
+            border-bottom: 3px solid #000;
+        }
+
+        /* ---------------- MAIN CONTENT ---------------- */
+        main {
+            max-width: 1100px;
+            margin: 4rem auto;
+            padding: 0 1rem 5rem;
+        }
+
+        /* INTRO / READING CONTENT */
+        .reading-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 4rem;
+            margin-bottom: 5rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 0.5s forwards;
+        }
+
+        .reading-text {
+            width: 50%;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #444;
+            animation: fadeInUp 1s ease-out 0.7s forwards;
+        }
+
+        .reading-text h2 {
+            font-size: 2.4rem;
+            margin-bottom: 1.5rem;
+            color: #222;
+        }
+
+        .reading-image {
+            width: 50%;
+            animation: slideIn 1s ease-out 0.9s forwards;
+        }
+
+        .reading-image img {
+            width: 100%;
+            max-height: 520px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 0 25px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .reading-image img:hover {
+            transform: scale(1.04);
+        }
+
+        /* GALLERY */
+        .reading-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+        }
+
+        .reading-gallery figure {
+            margin: 0;
+            text-align: center;
+        }
+
+        .reading-gallery img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.12);
+            opacity: 0;
+            transform: scale(0.95);
+            transition: transform 0.3s ease;
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        .reading-gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+        }
+
+        .reading-gallery figcaption {
+            margin-top: 0.8rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #222;
+            color: #ccc;
+            padding: 2rem;
+            text-align: center;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 2s forwards;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        /* ---------------- ANIMATIONS ---------------- */
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(30px);}
+            100% { opacity: 1; transform: translateY(0);}
+        }
+
+        @keyframes slideIn {
+            0% { opacity: 0; transform: translateX(-50px);}
+            100% { opacity: 1; transform: translateX(0);}
+        }
+
+        /* ---------------- RESPONSIVE ---------------- */
+        @media (max-width: 900px) {
+            .reading-content {
+                flex-direction: column;
+            }
+
+            .reading-text,
+            .reading-image {
+                width: 100%;
+            }
+
+            .reading-gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .reading-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Reading: Into the Dark Corners of Humanity</h1>
+    <p>These stories do not comfort. They expose violence, guilt, fear, and the quiet weight of
+        choices that follow us until the end.</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index1.html">Art</a></li>
+        <li><a href="index2.html">Instruments</a></li>
+        <li><a href="index3.html">Watching</a></li>
+        <li><a href="index4.html">Gaming</a></li>
+        <li><a href="index5.html">Reading</a></li>
+    </ul>
+</nav>
+
+<main>
+    <section class="reading-content">
+        <div class="reading-text">
+            <h2>Where Life, Death, and Sin Intersect</h2>
+            <p>
+                The books I gravitate toward are heavy with tension and moral decay.
+                Stories like <em>Roommate</em> and <em>Kasak Angkarn</em> uncover how ordinary lives can slip into
+                crime, betrayal, and irreversible violence. Trust becomes a weakness, and survival often
+                demands silence or cruelty.
+            </p>
+            <p>
+                In <em>A Time to Kill</em>, justice blurs into vengeance, forcing the reader to confront whether
+                any action can truly be righteous. <em>Tears of Life</em> lingers on the final breaths of existence,
+                while <em>The Midnight Library</em> offers not hope, but the quiet torment of endless regret.
+                Even <em>Dark Fairy Tales</em> strip innocence away, revealing fear and desire beneath familiar myths.
+                These stories do not offer salvation — only reflection.
+            </p>
+        </div>
+
+        <div class="reading-image">
+            <img src="reading-main.jpg" alt="Dark romance reading aesthetic">
+        </div>
+    </section>
+
+    <section class="reading-gallery">
+        <figure>
+            <a href="https://www.naiin.com/product/detail/607508?srsltid=AfmBOop637Z3gkcim0DorwMJK_X5V3QWSkKl_UdGykEFRmlT_rClGS-B">
+                <img src="read1.jpg" alt="กาสักอังก์ฆาต">
+                <figcaption>กาสักอังก์ฆาต</figcaption>
+            </a>
+        </figure>
+
+        <figure>
+            <a href="https://www.naiin.com/product/detail/685662">
+                <img src="read2.jfif" alt="รูมเมต">
+                <figcaption>รูมเมต</figcaption>
+            </a>
+        </figure>
+
+        <figure>
+            <a href="https://www.naiin.com/product/detail/529180?srsltid=AfmBOopnrcEDGwhL-PLmQ7NGZlDwTk3pI1sYOT8dJIba4R0U4e-JLaox">
+                <img src="read3.jpg" alt="The midnight library">
+                <figcaption>The midnight library</figcaption>
+            </a>
+        </figure>
+
+        <figure>
+            <a href="https://shopee.co.th/(%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%AA%E0%B9%88%E0%B8%87)-%E0%B8%AB%E0%B8%99%E0%B8%B1%E0%B8%87%E0%B8%AA%E0%B8%B7%E0%B8%AD-Tears-of-life-%E0%B8%8A%E0%B8%B5%E0%B8%A7%E0%B8%B4%E0%B8%95%E0%B8%AA%E0%B8%B8%E0%B8%94%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B8%A2%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B8%A5%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A2%E0%B9%83%E0%B8%88%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B9%80%E0%B8%AB%E0%B8%A5%E0%B8%B7%E0%B8%AD%E0%B8%AD%E0%B8%A2%E0%B9%88-Sinner-P-%E0%B9%80%E0%B8%82%E0%B8%B5%E0%B8%A2%E0%B8%99-i.13868538.25440995838">
+                <img src="read4.png" alt="Tears of life">
+                <figcaption>Tears of life</figcaption>
+            </a>
+        </figure>
+
+        <figure>
+            <a href="https://www.naiin.com/product/detail/582049?srsltid=AfmBOorTQH-mowP5ET8duYsLaijk-7kxsFQoddkf7GIHRhYXCQfKbKlD">
+                <img src="read5.jfif" alt="A TIME TO KILL">
+                <figcaption>A TIME TO KILL</figcaption>
+            </a>
+        </figure>
+
+        <figure>
+            <a href="https://www.naiin.com/product/detail/686722?srsltid=AfmBOoqbyEmhrxDpfqRsNG9kWCGaTUz6SxOQbIWw3uGZa3YaicXDhC-O">
+                <img src="read6.png" alt="Dark fairy tales">
+                <figcaption>Dark fairy tales</figcaption>
+            </a>
+        </figure>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 My Hobby Corner. All rights reserved.</p>
+</footer>
+
+<script>
+    // Parallax effect on gallery images while scrolling
+    const gallery = document.querySelector('.reading-gallery');
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const imgs = gallery.querySelectorAll('img');
+        imgs.forEach((img, index) => {
+            const speed = 0.1 + index * 0.05;
+            img.style.transform = `translateY(${scrollTop * speed}px) scale(1)`;
+        });
+    });
+</script>
+
+</body>
+</html>

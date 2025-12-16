@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Violin - My Hobby Corner</title>
+
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fefdf7;
+            color: #333;
+        }
+
+        /* ---------- Header ---------- */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 3rem 1rem;
+            text-align: center;
+            background-image: url('violin-header-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin: 0;
+            animation: fadeSoft 1.4s ease-out forwards;
+        }
+
+        header p {
+            font-size: 1.25rem;
+            color: #ddd;
+            animation: fadeSoft 1.8s ease-out forwards;
+        }
+
+        /* ---------- Navigation ---------- */
+        nav {
+            background-color: #f8f8f6;
+            padding: 1rem 0;
+            border-top: 2px solid #ddd;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: inline-flex;
+        }
+
+        nav ul li {
+            margin: 0 2rem;
+        }
+
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        nav ul li a:hover {
+            color: #000;
+            border-bottom: 3px solid #000;
+        }
+
+        /* ---------- Main ---------- */
+        main {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 1rem 4rem 1rem;
+        }
+
+        /* ---------- Violin Content (ทรงเดิม) ---------- */
+        .violin-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+
+        .violin-content img {
+            width: 45%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            animation: softAppear 1.6s ease-out forwards;
+        }
+
+        .violin-content img:hover {
+            transform: scale(1.05);
+        }
+
+        .violin-text {
+            width: 50%;
+            color: #444;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            font-weight: 400;
+            animation: fadeSoft 1.5s ease-out forwards;
+        }
+
+        .violin-text h2 {
+            color: #222;
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .violin-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        /* ---------- Media Section ---------- */
+        .media-container {
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .media-container h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #444;
+            animation: fadeSoft 1.6s ease-out forwards;
+        }
+
+        .media-container img {
+            opacity: 0;
+            animation: softAppear 1.4s ease-out forwards;
+        }
+
+        .media-container img:nth-child(1) { animation-delay: 0.2s; }
+        .media-container img:nth-child(2) { animation-delay: 0.4s; }
+        .media-container img:nth-child(3) { animation-delay: 0.6s; }
+
+        /* ---------- Footer ---------- */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+            color: #ccc;
+        }
+
+        /* ---------- Animations (เบา เรียบ หรู) ---------- */
+        @keyframes fadeSoft {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes softAppear {
+            from {
+                opacity: 0;
+                transform: scale(0.98);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Violin: The Sound of My Soul</h1>
+    <p>Explore the beauty and depth of the violin, my true musical passion.</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index1.html">Art</a></li>
+        <li><a href="index2.html">Instruments</a></li>
+        <li><a href="index3.html">Watching</a></li>
+        <li><a href="index4.html">Gaming</a></li>
+        <li><a href="index5.html">Reading</a></li>
+    </ul>
+</nav>
+
+<main>
+    <section class="violin-content">
+        <div class="violin-text">
+            <h2>The Violin: A Personal Connection</h2>
+            <p>
+                The violin is more than just an instrument to me—it's an extension of my emotions.
+                Every note feels like a story quietly unfolding.
+            </p>
+            <p>
+                Through its sound, I express feelings that words cannot hold.
+                Each performance deepens my bond with the instrument.
+            </p>
+        </div>
+
+        <div class="violin-images">
+            <a href="https://www.youtube.com/watch?v=xjeHThBHTCs" target="_blank" rel="noopener">
+                <img src="instrument1.jpg" alt="Close-up of violin">
+            </a>
+            <a href="https://youtu.be/K0Lyog7-Uvs" target="_blank" rel="noopener">
+                <img src="instrument2.jpg" alt="Playing the violin">
+            </a>
+        </div>
+    </section>
+
+    <section class="media-container">
+        <h3>Captured Moments</h3>
+        <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+            <img src="violin1.jpg" alt="Violin detail"
+                 style="width: 28%; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.15);">
+            <img src="violin2.jpg" alt="Bow on strings"
+                 style="width: 28%; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.15);">
+            <img src="violin3.jpg" alt="Sheet music and violin"
+                 style="width: 28%; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.15);">
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 My Hobby Corner. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
